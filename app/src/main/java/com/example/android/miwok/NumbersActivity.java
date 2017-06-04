@@ -9,8 +9,8 @@ public class NumbersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_numbers);
-        String[] words = new String[10];
+       setContentView(R.layout.activity_numbers);
+        String[] words = new String[11];
         words[0] = "one";
         words[1] = "two";
         words[2] = "three";
@@ -22,8 +22,7 @@ public class NumbersActivity extends AppCompatActivity {
         words[9] = "nine";
         words[10] = "ten";
 
-        Log.v("NumbersActivity", "Word at index 0: " + words[0]);
-        Log.v("NumbersActivity", "Word at index 1: " + words[1]);
-
+       Log.v("NumbersActivity", "Word at index 0: " + words[0]);
+       Log.v("NumbersActivity", "Word at index 1: " + words[1]);
     }
 }
