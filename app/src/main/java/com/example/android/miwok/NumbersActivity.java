@@ -2,7 +2,6 @@ package com.example.android.miwok;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -13,7 +12,7 @@ public class NumbersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       setContentView(R.layout.activity_numbers);
+        setContentView(R.layout.activity_numbers);
         ArrayList<String> words = new ArrayList<String>();
         words.add("one");
         words.add("two");
@@ -27,11 +26,33 @@ public class NumbersActivity extends AppCompatActivity {
         words.add("ten");
 
         LinearLayout rootView = (LinearLayout)findViewById(R.id.rootView);
+
+
         TextView wordView = new TextView(this);
         wordView.setText(words.get(0));
         rootView.addView(wordView);
 
+        TextView wordView2 = new TextView(this);
+        wordView2.setText(words.get(1));
+        rootView.addView(wordView2);
 
-       Log.v("NumbersActivity", "Words in ArrayList words: " + words);
+        TextView wordView3 = new TextView(this);
+        wordView3.setText(words.get(2));
+        rootView.addView(wordView3);
+
+
+
+        int counter = 3;
+
+        while (counter < words.size()) {
+            TextView wordsView = new TextView(this);
+            wordsView.setText(words.get(counter));
+            rootView.addView(wordsView);
+            counter ++;
+        }
+
+
+
+
     }
 }
