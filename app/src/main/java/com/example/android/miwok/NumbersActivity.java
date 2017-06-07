@@ -27,27 +27,12 @@ public class NumbersActivity extends AppCompatActivity {
 
         LinearLayout rootView = (LinearLayout)findViewById(R.id.rootView);
 
-
-        TextView wordView = new TextView(this);
-        wordView.setText(words.get(0));
-        rootView.addView(wordView);
-
-        TextView wordView2 = new TextView(this);
-        wordView2.setText(words.get(1));
-        rootView.addView(wordView2);
-
-        TextView wordView3 = new TextView(this);
-        wordView3.setText(words.get(2));
-        rootView.addView(wordView3);
-
-
-
-        int counter = 3;
+        int counter = 0;
 
         while (counter < words.size()) {
-            TextView wordsView = new TextView(this);
-            wordsView.setText(words.get(counter));
-            rootView.addView(wordsView);
+            TextView wordView = new TextView(this);
+            wordView.setText(words.get(counter));
+            rootView.addView(wordView);
             counter ++;
         }
 
